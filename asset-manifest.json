@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Job-Poster-Finder/static/css/main.1e1bf8e2.css",
+    "main.js": "/Job-Poster-Finder/static/js/main.40b5d9c4.js",
+    "static/media/main.svg": "/Job-Poster-Finder/static/media/main.17b316de742b3a1202078c5ae18c8261.svg",
+    "static/media/not-found.svg": "/Job-Poster-Finder/static/media/not-found.5cfa24fa5e3ca7dffe02f358358ea9df.svg",
+    "static/media/logo.svg": "/Job-Poster-Finder/static/media/logo.35bb8e1d9b5745af32ff148cbee51dfa.svg",
+    "index.html": "/Job-Poster-Finder/index.html",
+    "main.1e1bf8e2.css.map": "/Job-Poster-Finder/static/css/main.1e1bf8e2.css.map",
+    "main.40b5d9c4.js.map": "/Job-Poster-Finder/static/js/main.40b5d9c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e1bf8e2.css",
+    "static/js/main.40b5d9c4.js"
+  ]
+}
