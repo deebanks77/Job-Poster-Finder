@@ -31,7 +31,7 @@ function TotalJobsContainer() {
     return <Loading center />;
   }
 
-  if (jobs.length === 0) {
+  if (allJobs.length === 0) {
     return (
       <Wrapper>
         <h2>No jobs to display...</h2>
@@ -42,7 +42,7 @@ function TotalJobsContainer() {
   return (
     <Wrapper>
       <h5>
-        {totalJobs} job{jobs.length > 1 && "s"} found
+        {totalJobs} job{allJobs.length > 1 && "s"} found
       </h5>
       <div className="jobs">
         {allJobs.map((job) => {
