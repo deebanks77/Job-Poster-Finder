@@ -3,7 +3,7 @@ import { getUserFromLocalStorage } from "./localStorage";
 import { clearStore } from "../features/user/userSlice";
 
 const customFetch = axios.create({
-  baseURL: "https://jobify-prod.herokuapp.com/api/v1/toolkit",
+  baseURL: "https://jobster-api-k2bx.onrender.com/api/v1",
 });
 
 customFetch.interceptors.request.use(

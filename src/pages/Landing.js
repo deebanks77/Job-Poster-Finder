@@ -16,9 +16,15 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            Crucifix narwhal street art asymmetrical, humblebrag tote bag pop-up
-            fixie raclette taxidermy craft beer. Brunch bitters synth, VHS
-            crucifix heirloom meggings bicycle rights.
+            The ultimate app for job seekers and recruiters! With Jobster, you
+            can easily add your job listings to our platform and connect with
+            top talent from around the world. Whether you're looking for your
+            next big opportunity or searching for the perfect candidate to fill
+            a position, Jobster has you covered. Our app is user-friendly and
+            intuitive, allowing you to easily apply for jobs or track the
+            progress of your applications. Say goodbye to endless job searching
+            and tedious recruitment processes, and say hello to Jobster. Join
+            our community today and start your journey to career success!
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register

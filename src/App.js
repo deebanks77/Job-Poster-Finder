@@ -11,6 +11,7 @@ import {
   AddJob,
   AllJobs,
   Profile,
+  TotalJobs,
 } from "./pages/dashboard/index";
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
           }
         >
           <Route index element={<Stats />} />
-          <Route path="all-jobs" element={<AllJobs />} />
+          <Route path="all-jobs" element={<TotalJobs />} />
+          <Route path="created-jobs" element={<AllJobs />} />
           <Route path="add-job" element={<AddJob />} />
           <Route path="profile" element={<Profile />} />
         </Route>

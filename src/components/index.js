@@ -11,6 +11,7 @@ import Loading from "./Loading";
 import ChartsContainer from "./ChartsContainer";
 import StatsContainer from "./StatsContainer";
 import StatItem from "./StatItem";
+import TotalJobsContainer from "./TotalJobsContainer";
 
 export {
   Logo,
@@ -26,4 +27,5 @@ export {
   ChartsContainer,
   StatsContainer,
   StatItem,
+  TotalJobsContainer,
 };

@@ -10,7 +10,23 @@ export const getAllJobsThunk = async (_, thunkAPI) => {
   }
   try {
     const resp = await customFetch.get(url);
+    // console.log(resp);
+    return resp.data;
+  } catch (error) {
+    return checkForUnauthorizedResponse(error, thunkAPI);
+  }
+};
+export const getTotalJobsThunk = async (_, thunkAPI) => {
+  const { page, search, searchStatus, searchType, sort } =
+    thunkAPI.getState().allJobs;
 
+  let url = `/jobs/all?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`;
+  if (search) {
+    url = url + `&search=${search}`;
+  }
+  try {
+    const resp = await customFetch.get(url);
+    // console.log(resp);
     return resp.data;
   } catch (error) {
     return checkForUnauthorizedResponse(error, thunkAPI);

@@ -1,7 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import customFetch from "../../utils/axios";
-import { getAllJobsThunk, showStatsThunk } from "./allJobsThunk";
+import {
+  getAllJobsThunk,
+  getTotalJobsThunk,
+  showStatsThunk,
+} from "./allJobsThunk";
 
 const initialFiltersState = {
   search: "",
@@ -13,6 +17,7 @@ const initialFiltersState = {
 
 const initialState = {
   isLoading: true,
+  allJobs: [],
   jobs: [],
   totalJobs: 0,
   numOfPages: 1,
@@ -25,6 +30,11 @@ const initialState = {
 export const getAllJobs = createAsyncThunk(
   "allJobs/getAllJobs",
   getAllJobsThunk
+);
+
+export const getTotalJobs = createAsyncThunk(
+  "allJobs/getTotalJobs",
+  getTotalJobsThunk
 );
 
 export const showStats = createAsyncThunk("allJobs/showStats", showStatsThunk);
@@ -63,6 +73,19 @@ const allJobsSlice = createSlice({
         state.totalJobs = payload.totalJobs;
       })
       .addCase(getAllJobs.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        toast.error(payload);
+      })
+      .addCase(getTotalJobs.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getTotalJobs.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.allJobs = payload.jobs;
+        state.numOfPages = payload.numOfPages;
+        state.totalJobs = payload.totalJobs;
+      })
+      .addCase(getTotalJobs.rejected, (state, { payload }) => {
         state.isLoading = false;
         toast.error(payload);
       })
